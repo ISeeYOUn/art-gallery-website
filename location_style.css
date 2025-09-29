@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+a {
+    cursor: pointer;
+    font-family: 'Big Shoulders Display', cursive;
+    letter-spacing: 1px;
+    font-size: 1.7rem;
+}
+
+/* Map and Button Grid Design*/
+.galleryLocationMap {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    -ms-grid-row: 1fr; */
+    width: 100%;
+}
+.mapImage iframe{
+    width: 100%;
+    height: 80vh;
+}
+
+/* The code in line 33 - 83 is supposed to combine static images
+and media queries to serve an image of the map location to the user */
+
+/* Map Image Media Queries */
+.mapImage {
+    width: 100%;
+    background-position: center;
+    grid-area: 1 / 1 / 2 / span 4;
+    height: 80vh;
+    background-color: rgb(236, 210, 178);
+    background-size: cover;
+}
+@media screen and (max-width: 475px) {
+    .mapImage{
+        /* background-image: url("./assets/mobile/image-map.png"); */
+        background-size: cover;
+    }
+}
+ 
+@media screen and (max-width: 599px) {
+    .mapImage{
+        /* background-image: url("./assets/mobile/image-map@2x.png"); */
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .mapImage{
+        /* background-image: url("./assets/tablet/image-map.png"); */
+        background-size: cover;
+    }
+ }
+
+@media screen and (min-width: 700px) and (orientation: landscape) {
+    .mapImage{
+        /* background-image: url("./assets/tablet/image-map@2x.png"); */
+        background-size: cover;
+    }
+ }
+
+@media screen and (min-width: 800px) {
+    .mapImage{
+        /* background-image: url("./assets/desktop/image-map.png"); */
+        background-size: cover;
+    }
+ }
+
+ @media screen and (min-width: 1600px) {
+    .mapImage{
+        /* background-image: url("./assets/desktop/image-map@2x.png"); */
+        background-size: cover;
+    }
+ }
+
+/* Button Design and Positioning */
+.button {
+    grid-area: 1 / 1 / 2 / 2;
+    place-self: start center;
+}
+
+.button {
+    width: 8rem;
+    line-height: 70px;
+    padding-right: 20px;
+    padding-left: 80px;
+    position: absolute;
+    top: 0;
+    background-color: #151515;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* margin-bottom: 15px; */
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+}
+
+.button span {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    background-color: #d5966c;
+    display: grid;
+    display: -ms-grid;
+    place-items: center;
+    padding: 21px 2px;
+}
+
+.button:hover span {
+  background-color: #151515;
+}
+
+.button:hover {
+    background-color: #d5966c;
+}
+
+@media screen and (min-width: 500px) {
+    .button {
+        margin-left: 6vw;
+        top: 17%;
+    }
+}
+
+/* Mid-Section with Location Address Details  */
+.locationDetail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    min-height: 18rem;
+    background-color: #151515;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.locationHead h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 4.37rem;
+    margin: 0;
+}
+
+.locationText {
+    width: 45%;
+}
+
+.coloredHeading {
+    color: #d5966c;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 0.5rem 0;
+}
+
+.locationText p {
+    font-family: 'outfit', sans-serif;
+    font-weight: 300;
+    line-height: 28px;
+}
+/* Media Queries for Location Address */
+@media screen and (max-width: 550px) {
+    .locationDetail {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 1.5rem 0 1.5rem 2rem;
+    }
+
+    .locationHead {
+        min-width: 50%;
+    }
+
+    .locationText {
+        width: 80%;
+    } 
+}
+
+@media screen and (min-width:  900px) {
+    .locationText {
+        max-width: 35vw;
+    }
+}
+
+/* Footer Design and Social Media Icons */
+.footer {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 150px;
+    background-color: #d5966c;
+    padding: 2% 10%;
+}
+
+.footerTitle{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.footerTitle h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footerText {
+    font-family: 'Outfit', sans-serif;
+    /* font-size: 18px; */
+    /* line-height: 28px; */
+    max-width: 50%;
+}
+
+.footerText p {
+    margin: 0;
+}
+  
+.footerIcons {
+    padding-bottom: 1rem;
+}
+
+.footerIcons a {
+    margin: 0 0.4rem;
+    text-decoration: none;
+}
+
+.footerIcons a svg {
+    fill: #151515;
+}
+
+.footerIcons a svg:hover,
+.footerIcons a svg:focus {
+    fill: #fff;
+}
+
+/*Mobile Design for Footer */
+@media screen and (max-width: 550px) {
+    .footer {
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 1.5rem 0 1.5rem 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footerText {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        max-width: 80%;
+    }
+
+    .footerIcons {
+        margin: 1rem 0 0;
+    }
+}
