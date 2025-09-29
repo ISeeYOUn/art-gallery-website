@@ -2,7 +2,6 @@
 
 ## Overview
 - Art Gallery Website is a 2-page responsive [website](https://github.com/ThierryAalitech/art-gallery-website#run) built with **HTML** &amp; **CSS**.
-- This project is an [AmaliTech Ghana](https://www.amalitech.org) graduate trainee assignment. 
 
 ## Description
   - The web pages are designed as follows:
@@ -27,10 +26,6 @@
   ##### Modifications &amp; Suggestions
      - The initial design used CSS media queries to get static images of the location map. However, to improve the user interaction and user experience we opted to use           an embedded Google maps frame.
      -  The navigation link buttons can be adjusted to stick to the top of the page when scrolling.
-     -  A contact number or email can be included in the footer.
-
-## Credits
-- Thierry [GitHub👨‍💻](https://github.com/ThierryAalitech)
-- Moses  [GitHub👨‍💻](https://github.com/mtenkorang)
+`
 
 >: Happy Coding 🖥️🌍 !
